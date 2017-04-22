@@ -13,13 +13,11 @@ public class BuyController {
 	
 	@Autowired
 	BuyMapper dao;
+	
 	@RequestMapping(method = RequestMethod.POST)
 	public String homepage(){
-		dao.queryOrder(null);
+		dao.findValue("kpi_001");
 		return "buy/toBuy-main";
-		
-		
-		
 	}
 
 }

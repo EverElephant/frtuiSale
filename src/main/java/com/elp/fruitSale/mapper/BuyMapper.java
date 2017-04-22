@@ -4,9 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface BuyMapper {	
-	public List<HashMap<String,Object>> queryOrder(HashMap<String, Object> param);
+	@Select("select * from test where kpi_code = #{kpiCode}")
+	String findValue(@Param("kpiCode") String kpiCode);
 }

@@ -4,10 +4,6 @@
 jQuery(function() {
 	homepage();
 });
-function loading() {
-	jQuery("#content_div").html(
-			'<div style="text-align:center;vertical-align:middle;"><img src="com/elp/fruitSale/index/images/loading.png"/></div>');
-}
 
 function homepage() {
 	jQuery.ajax({
