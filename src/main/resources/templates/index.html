@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>翔润农业开发有限公司</title>
+<link href="/scripts/custom/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/scripts/custom/css/reset.min.css" />
+<link rel="stylesheet" href="/scripts/custom/css/swiper.min.css" />
+<link href="/scripts/custom/css/nav_foot.css" rel="stylesheet" />
+<link href="/scripts/custom/css/index.css?v=1" rel="stylesheet" />
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<style>
+.swiper-container {
+	width: 100%;
+	height: 210px;
+	margin: 20px auto;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	width: 60%;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+</style>
+<!-- 设置rem-->
+<script>
+	remFn(10);
+	window.onresize = function() {
+		remFn(10);
+	};
+	function remFn(num) {
+		document.documentElement.style.fontSize = document.documentElement.clientWidth
+				/ num + 'px';
+	}
+</script>
+</head>
+
+<body>
+
+	<!-- 顶部导航 -->
+	<div class="navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" onclick="homepage()"> <img
+					src="/fruitSale/index/images/logo.jpg" alt="logo" />
+				</a> <a class="index" href="#" onclick="homepage()">主页</a>
+			</div>
+			
+			<div class="navbar_ul">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"  class="Analysis" onclick="homepage()">首页</a> <p></p></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle Analysis"
+						data-toggle="dropdown">产品简介<strong class="caret"></strong></a> <p></p>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="intro('mjy')">马家柚</a> </li>
+							<li><a href="#" onclick="intro('mht')">猕猴桃</a> </li>
+							<li><a href="#" onclick="intro('qc')">脐橙</a> </li>
+						</ul></li>
+					<li><a href="#" onclick="toBuy()" class="Analysis">产品购买</a> <p></p></li>
+					<li><a href="#" onclick="aboutUs()" class="Analysis">关于我们</a> <p></p></li>
+					<li><a href="#" onclick="contactUs()" class="Analysis">联系我们</a> <p></p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 下边的内容 -->
+	<div id="content_div"></div>
+	<!--foot-->
+	<div class="foot_box">
+		<div class="container">
+			<div class="contact">
+				<h3>联系方式</h3>
+
+				<div class="p_box">
+					<p>+86 18810544420</p>
+
+					<p>727845268@qq.com</p>
+
+				</div>
+
+			</div>
+			<div class="cooperation">
+				<h3>合作</h3>
+
+				<div class="p_box">
+					<p>
+						<a href="#" onclick="contactUs()" class="Analysis" >商务合作</a>
+					</p>
+
+					<p>
+						<a href="#" onclick="contactUs()" class="Analysis" >企业采购</a>
+					</p>
+				</div>
+
+			</div>
+
+			<div class="follow mo_hide">
+				<h3>关注我们</h3>
+
+				<div class="weixin">
+					<em></em>
+
+					<p>微信</p>
+				</div>
+				<div class="tianmao">
+					<a href="#" target="_blank"
+						class="Analysis"> <em></em>
+
+						<p>天猫</p>
+					</a>
+
+				</div>
+
+				<div class="weibo">
+					<a href="#" target="_blank" class="Analysis" >
+						<em></em>
+
+						<p>微博</p>
+					</a>
+				</div>
+			</div>
+			<div class="follow mo_show">
+				<h3>关注我们</h3>
+				<section class="p_box">
+					<img class="Analysis weixin" 
+						src="#" /> <a
+						href="#" target="_blank" class="Analysis"
+						> <img
+						src="#" /></a> <a href="#" target="_blank"
+						class="Analysis" > <img
+						src="#" />
+					</a>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!--关注-->
+	<div class="alert_bg"></div>
+	<!--nav-bg-->
+	<div class="alert_navbg"></div>
+	<div class="alert_box">
+		<img class="x" src="#" alt="关闭" /> <img class="er"
+			src="#" alt="二维码" />
+
+	</div>
+	<div class="foot_bot">
+		<div class="container">
+
+		</div>
+	</div>
+</body>
+<script src="/scripts/custom/js/jquery-1.9.1.min.js"></script>
+<script src="/scripts/custom/js/jquery.md5.js"></script>
+<script src="/scripts/custom/js/Global.js"></script>
+<script src="/scripts/custom/js/swiper.min.js"></script>
+<script src="/scripts/custom/js/index.js"></script>
+<script src="/scripts/custom/js/nav.js"></script>
+<script src="/scripts/custom/js/bootstrap.min.js"></script>
+<script src="/scripts/custom/js/owl.carousel.min.js"></script>
+<script src="/scripts/custom/js/Analysis.js"></script>
+<script type="text/javascript"
+	src="/fruitSale/index/js/index.js"></script>
+</html>
