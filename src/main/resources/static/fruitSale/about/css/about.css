@@ -1,0 +1,201 @@
+/*banner*/
+body{
+    overflow-x: hidden;
+}
+.banner img{
+    width: 100%;
+}
+/*关于乐纯*/
+.about_lechun{
+    margin-top: 100px;
+}
+.about_lechun h3 {
+    font-size: 26px;
+    color: #1f1f1f;
+    font-weight: 600;
+}
+
+.about_lechun .title {
+    text-align: center;
+}
+
+.about_lechun .title {
+    font-size: 26px;
+    color: #1f1f1f;
+    font-weight: 600;
+}
+
+.about_lechun .title div{
+    width: 277px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about_lechun .title div hr {
+    height: 1px;
+    background: #000;
+    width: 30px;
+    margin: 10px 0;
+}
+
+.about_lechun .title p.About{
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.about_lechun .title div hr.left{
+    float: left;
+}
+.about_lechun .title div hr.right {
+    float: right;
+}
+.title .content{
+    max-width: 750px;
+    margin: 0 auto 130px;
+    font-size: 20px;
+    line-height: 35px;
+    color: #333;
+    word-spacing:2px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.about_lechun .row img{
+    width: 100%;
+    transition:1s;
+    -webkit-transition:1s;
+}
+.about_lechun .row div{
+    text-align: center;
+    padding: 0;
+}
+.about_lechun .row h4{
+    font-size: 30px;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+.about_lechun .row  hr {
+    height: 5px;
+    background: #3a3a3a;
+    width: 70px;
+    margin: 40px auto;
+}
+.about_lechun .row p{
+    font-size: 20px;
+    line-height: 38px;
+    color: #333;
+    max-width: 620px;
+    margin: 0 auto;
+}
+.about_lechun .row .right{
+    padding-top: 150px;
+}
+.about_lechun .row .eat{
+margin-bottom: 25px;
+}
+@media screen and (min-width: 1700px){
+    .about_lechun .row .right{
+
+        padding-top: 180px;
+    }
+}
+@media screen and (max-width: 1550px){
+    .about_lechun .row .right{
+
+        padding-top: 100px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .about_lechun .row .right{
+
+        padding-top: 70px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .about_lechun .row .right{
+        padding-top:100px;
+    }
+    .about_lechun .row p{
+        max-width: 500px;
+        line-height: 24px;
+        padding: 0 18px;
+    }
+
+    .about_lechun .row  hr{
+         margin: 15px auto;
+    }
+
+}
+@media screen and (max-width: 980px){
+    .about_lechun .row .right{
+        padding-top:80px;
+    }
+    .about_lechun .row p{
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0 18px;
+    }
+    .about_lechun .row h4{
+        font-size: 18px;
+    }
+    .about_lechun .row  hr{
+        margin: 15px auto;
+    }
+    .title .content{
+        max-width: 750px;
+        font-size: 16px!important;
+        line-height: 24px;
+        color: #181818;
+        word-spacing:2px;
+        letter-spacing: 1px;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .about_lechun {
+        margin-top: 0.6667rem;
+    }
+    .about_lechun .title div {
+        width: 3.4rem;
+    }
+    .about_lechun h3 {
+        font-size: 0.4267rem;
+    }
+    .about_lechun .title div hr {
+        width:0.36rem;
+    }
+    .about_lechun .title p.About {
+        font-size: 0.32rem;
+        font-weight: 100;
+        margin-bottom:0.4rem;
+    }
+    .title .content {
+        max-width:8.5333rem;
+        font-size: 0.2933rem!important;
+        word-spacing: 0;
+        letter-spacing: 0;
+        padding: 0;
+        margin: 0 auto 0.6667rem;
+    }
+    .about_lechun .row .right {
+        padding-top: 0.8667rem;
+    }
+    .about_lechun .row h4 {
+        font-size: 0.4rem;
+    }
+    .about_lechun .row hr {
+        height: 2px;
+        width: 0.9333rem;
+        margin:0.5333rem auto;
+    }
+    .about_lechun .row p {
+        max-width: 8.4rem;
+        font-size: 0.2933rem;
+        line-height: 24px;
+         padding: 0 ;
+    }
+    .about_lechun .row .eat {
+        margin-bottom: 0px;
+    }
+}
