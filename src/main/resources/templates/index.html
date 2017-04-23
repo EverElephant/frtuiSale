@@ -70,22 +70,23 @@
 				</button>
 				<a class="navbar-brand" href="#" onclick="homepage()"> <img
 					src="/fruitSale/index/images/logo.jpg" alt="logo" />
-				</a> <a class="index" href="#" onclick="homepage()">主页</a>
+				</a>
+				<a class="index" href="#" onclick="homepage()">主页</a>
 			</div>
 			
 			<div class="navbar_ul">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#"  class="Analysis" onclick="homepage()">首页</a> <p></p></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle Analysis"
+					<li id="home_index" class="active"><a href="#"  class="Analysis" onclick="homepage()">首页</a> <p></p></li>
+					<li id="intro_index" class="dropdown"><a href="#" class="dropdown-toggle Analysis"
 						data-toggle="dropdown">产品简介<strong class="caret"></strong></a> <p></p>
 						<ul class="dropdown-menu">
-							<li><a href="#" onclick="intro('mjy')">马家柚</a> </li>
-							<li><a href="#" onclick="intro('mht')">猕猴桃</a> </li>
-							<li><a href="#" onclick="intro('qc')">脐橙</a> </li>
+							<li id="intro_mjy_index"><a href="#" onclick="intro('mjy')">马家柚</a> </li>
+							<li id="intro_mht_index"><a href="#" onclick="intro('mht')">猕猴桃</a> </li>
+							<li id="intro_qc_index"><a href="#" onclick="intro('qc')">脐橙</a> </li>
 						</ul></li>
-					<li><a href="#" onclick="toBuy()" class="Analysis">产品购买</a> <p></p></li>
-					<li><a href="#" onclick="aboutUs()" class="Analysis">关于我们</a> <p></p></li>
-					<li><a href="#" onclick="contactUs()" class="Analysis">联系我们</a> <p></p></li>
+					<li id="buy_index" ><a href="#" onclick="toBuy()" class="Analysis">产品购买</a> <p></p></li>
+					<li id="about_index" ><a href="#" onclick="aboutUs()" class="Analysis">关于我们</a> <p></p></li>
+					<li id="contact_index" ><a href="#" onclick="contactUs()" class="Analysis">联系我们</a> <p></p></li>
 				</ul>
 			</div>
 		</div>
@@ -186,7 +187,7 @@
 <script src="/scripts/custom/js/bootstrap.min.js"></script>
 <script src="/scripts/custom/js/owl.carousel.min.js"></script>
 <script src="/scripts/custom/js/Analysis.js"></script>
-<script type='text/javascript' src='/scripts/loadmask/jquery.loadmask.spin.js'></script>
+<script src="/scripts/custom/js/swiper.min.js"></script>
 <script type="text/javascript"
 	src="/fruitSale/index/js/index.js"></script>
 </html>
