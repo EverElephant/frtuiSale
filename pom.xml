@@ -24,6 +24,7 @@
 		<druid-version>1.0.18</druid-version>
 		<mysql-version>5.1.38</mysql-version>
 		<mybatis-version>1.1.1</mybatis-version>
+		<fastjson-version>1.2.31</fastjson-version>
 	</properties>
 	<dependencies>
 		<!-- springboot web依赖 -->
@@ -62,7 +63,13 @@
 		    <artifactId>mybatis-spring-boot-starter</artifactId>
 		    <version>${mybatis-version}</version>
 		</dependency>
-	
+		<!-- fastjson -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>${fastjson-version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

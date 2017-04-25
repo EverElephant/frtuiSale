@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>购物车</title>
+
+<link rel="stylesheet" href="css/style.css" />
+
+<script type="text/javascript" src="/fruitSale/buy/js/trolley.js"></script>
+
+</head>
+
+<body>
+<div class="modity container">
+	<div class="row">
+		<table class="table-bordered">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>商品</th>
+					<th>单价</th>
+					<th>数量</th>
+					<th>小计</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="product : ${productList}">
+					<td width="10%" th:text="${product.type}" >type</td>
+					<td width="30%" th:text="${product.name}">name</td>
+					<td width="10%" th:text="${product.price}">price</td>
+					<td width="15%" th:value="${product.type}" ><input type="text" size="8" th:value="${product.num}" onchange="changeTrolley(this)"></input></td>
+					<td width="15%" th:text="${product.totalPrice}">totalPrice</td>
+					<td width="10%" class="del"><a style="cursor:pointer">删除</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-1 col-lg-2 col-sm-3"><button class="btn">全部删除</button></div>
+		<div class="col-md-8 col-lg-7 col-sm-6"><span>合计：￥</span><span id="susum" th:text="${total}"></span></div>
+		<div class="col-md-3 col-lg-3 col-sm-3"><button class="btn">结算</button></div>
+	</div>
+</div>
+</body>
+</html>

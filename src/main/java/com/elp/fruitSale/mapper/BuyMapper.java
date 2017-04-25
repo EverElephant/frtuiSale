@@ -11,4 +11,6 @@ import org.apache.ibatis.annotations.Select;
 public interface BuyMapper {	
 	@Select("select * from test where kpi_code = #{kpiCode}")
 	String findValue(@Param("kpiCode") String kpiCode);
+	@Select("select * from product_price")
+	List<HashMap<String, String>> queryAllPrice();
 }
