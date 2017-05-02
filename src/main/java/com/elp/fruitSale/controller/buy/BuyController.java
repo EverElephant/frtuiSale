@@ -36,60 +36,7 @@ public class BuyController {
 		dao.findValue("kpi_001");
 		return "buy/toBuy-main";
 	}
-	@SuppressWarnings("unchecked")
-	@RequestMapping(value="add_to",method = RequestMethod.POST)
-	public String addProduct(HttpServletRequest request,HttpServletResponse response,@RequestParam(value ="type") String type){
-		//返回结果
-		Cookie cookie = new Cookie("shopping_trolley", ""); //设置cookie的名称，唯一
-		
-		List<JSONObject> productList = null;
-		Cookie[] cookies = request.getCookies();
-		String  trolleysString= "";
-		if(null==cookies){
-			productList = new ArrayList<>();
-			JSONObject p = new JSONObject();
-			p.put("type", type);
-			p.put("num","1");
-			productList.add(p);
-		}else{
-			//查看cookies里有没有购物车的缓存，如果有取出来塞到trolleysString
-			for(Cookie c:cookies){
-				if(c.getName().equals("shopping_trolley")){
-					trolleysString=c.getValue();
-				}
-			}
-			
-			
-			if("".equals(trolleysString)){//如果没取到，新建购物车添加商品
-				productList = new ArrayList<>();
-				JSONObject p = new JSONObject();
-				p.put("type", type);
-				p.put("num","1");
-				productList.add(p);
-			}else{//如果取到了购物车，转化成list
-				boolean added= false;
-				productList =(List<JSONObject>) JSON.parseObject(trolleysString, ArrayList.class);
-				//看看购物车里有没有该商品，有则加数，无则添加
-				for(JSONObject p:productList){
-					if(type.equals(p.get("type"))){
-						p.put("num",Integer.parseInt((String) p.get("num"))+1+"");
-						added=true;
-						break;
-					}		
-				}
-				if(added==false){
-					JSONObject p = new JSONObject();
-					p.put("type",type);
-					p.put("num","1");
-					productList.add(p);
-				}
-			}
-		}
-		cookie.setValue(JSON.toJSONString(productList));
-		cookie.setMaxAge(86400);  //设置cookie过期时间一天
-		response.addCookie(cookie);;//保存cookie
-		return null;
-	}
+
 	@RequestMapping(value="trolley",method = RequestMethod.POST)
 	public String trolley(HttpServletRequest request,HttpServletResponse response,Model model){
 		float total=0;
@@ -136,44 +83,7 @@ public class BuyController {
 		model.addAttribute("productList", productList);
 		return "buy/toBuy-trolley";
 	}
-	@RequestMapping(value="change_trolley",method = RequestMethod.POST)
-	public String changeTrolley(HttpServletRequest request,HttpServletResponse response,Model model,@RequestParam(value ="type") String type,@RequestParam(value ="num") String num){
-		//返回结果
-				Cookie cookie = new Cookie("shopping_trolley", ""); //设置cookie的名称，唯一
-				
-				List<JSONObject> productList = new ArrayList<>();
-				Cookie[] cookies = request.getCookies();
-				String  trolleysString= "";
-				if(null!=cookies){
-					for(Cookie c:cookies){
-						if(c.getName().equals("shopping_trolley")){
-							trolleysString=c.getValue();
-						}
-					}
-				}
-				if(!"".equals(trolleysString)){
-					//如果取到了购物车，转化成list
-					boolean added= false;
-					productList =(List<JSONObject>) JSON.parseObject(trolleysString, ArrayList.class);
-					//看看购物车里有没有该商品，有则加数，无则添加
-					for(JSONObject p:productList){
-						if(type.equals(p.get("type"))){
-							p.put("num", num);
-						}		
-					}
-				}
-				cookie.setValue(JSON.toJSONString(productList));
-				cookie.setMaxAge(86400);  //设置cookie过期时间一天
-				response.addCookie(cookie);;//保存cookie
-				
-				//查询价格
-				List<HashMap<String,String>> prices = dao.queryAllPrice();
-				
-				model.addAttribute("total",total);
-				model.addAttribute("productList", productList);
-				return "buy/toBuy-trolley";
-	}
-
+	
 	
 }
 
