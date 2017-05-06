@@ -33,7 +33,6 @@ function add_to(type){
 		// 添加到shopping_trolley
 		shopping_trolley.push(goodsObj);
 	}else{
-		alert(shopping_trolley.toString());
 		// 先判断cookie中有无相同的guid商品
 		for(var i=0;i<shopping_trolley.length;i++){
 			// 如果商品已经存在cookie中，则数量+1
@@ -58,18 +57,17 @@ function add_to(type){
 
 }
 function checkTrolley(){
-//	jQuery.post("to_buy/trolley",function(data){
-//		jQuery("#listDiv").html(data);
-//	});
-	alert("123");
-	jQuery.ajax({
-			url : "to_buy/trolley",
-	        dataType: 'json',
-	        type : 'POST',
-	        crossDomain: true,
-	        contentType: "application/json",
-	        complete:function(data){
-	    		jQuery("#listDiv").html(data);
-	        }
+	jQuery.post("to_buy/trolley",function(data){
+		jQuery("#listDiv").html(data);
 	});
+//	jQuery.ajax({
+//			url : "to_buy/trolley",
+//	        dataType: 'json',
+//	        type : 'POST',
+//	        crossDomain: true,
+//	        contentType: "application/json",
+//	        complete:function(data){
+//	    		jQuery("#listDiv").html(data);
+//	        }
+//	});
 }

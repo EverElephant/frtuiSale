@@ -1,5 +1,4 @@
 
-/*盲鹿聬莽潞炉盲潞搂氓鈥溌�*/
 .product_box {
     margin-top: 120px;
 }
@@ -65,7 +64,6 @@ section.img_box {
     color: #1f1f1f;
 }
 
-/*忙艗鈥懊┾�櫬�*/
 .product_box section span, .about_box .row div div a {
     display: block;
     margin-top: 60px;
@@ -363,7 +361,7 @@ section.img_box {
     color: #ffffff;
     line-height: 18px;
     font-size: 12px;
-    background: url("../images/index/eat_02_bg.png") no-repeat center;
+   
 }
 
 .contact_box .row div.cent span {
@@ -398,7 +396,6 @@ section.img_box {
     color: #ffffff;
     line-height: 18px;
     font-size: 12px;
-    background: url("../images/index/eat_03_bg.png") no-repeat center;
 }
 
 .contact_box .row div.last span {
@@ -570,7 +567,6 @@ section.img_box {
     display: block;
     width: 100px;
     height: 230px;
-    background: url("../images/index/png.png") no-repeat center;
 }
 
 .scroll-outer em.left {
@@ -581,7 +577,6 @@ section.img_box {
     display: block;
     width: 100px;
     height: 230px;
-    background: url("../images/index/png1.png") no-repeat center;
 }
 
 #scroll .item {
@@ -805,7 +800,6 @@ section.img_box {
     width: 38px;
     top: 115px;
     z-index: 20;
-    background: url("../images/index/pext1.png") no-repeat;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next {
@@ -813,7 +807,6 @@ section.img_box {
     right: 0px;
     top: 115px;
     width: 38px;
-    background: url("../images/index/pext2.png") no-repeat;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-prev:before {
@@ -1189,7 +1182,7 @@ section.img_box {
 
     .contact_box .row div.cent p {
         width: 304px;
-        background: url(../images/index/eat_02_bg.png) no-repeat center;
+      
         background-size: 100% 100%;
         height: 108px;
         line-height: 16px;
@@ -1199,7 +1192,6 @@ section.img_box {
         bottom: 5px;
         width: 7.7rem;
         height: 45px;
-        background: url(../images/index/eat_03_bg.png) no-repeat center;
         font-size: 0.2667rem;
         background-size: 100% 100%;
         line-height: 9px;
@@ -1410,7 +1402,7 @@ section.img_box {
 
     .contact_box .row div.cent p {
         width: 218px;
-        background: url(../images/index/eat_02_bg.png) no-repeat center;
+       
         background-size: 100% 100%;
         font-size: 0.1333rem;
         height: 125px;
@@ -1421,7 +1413,6 @@ section.img_box {
         bottom: 5px;
         width: 220px;
         height: 45px;
-        background: url(../images/index/eat_03_bg.png) no-repeat center;
         font-size: 0.1333rem;
         background-size: 100% 100%;
         line-height: 9px;

@@ -5,44 +5,12 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <title>翔润农业开发有限公司</title>
-<link href="/scripts/custom/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="/scripts/custom/css/reset.min.css" />
-<link rel="stylesheet" href="/scripts/custom/css/swiper.min.css" />
-<link href="/scripts/custom/css/nav_foot.css" rel="stylesheet" />
-<link href="/scripts/custom/css/index.css?v=1" rel="stylesheet" />
+<link href="/global/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/fruitSale/index/css/reset.min.css" rel="stylesheet"/>
+<link href="/global/swiper-3.4.2/css/swiper-3.4.2.min.css" rel="stylesheet"/>
+<link href="/fruitSale/index/css/nav_foot.css" rel="stylesheet" />
+<link href="/fruitSale/index/css/index.css?v=1" rel="stylesheet" />
 
-		
-<!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-<style>
-.swiper-container {
-	width: 100%;
-	height: 210px;
-	margin: 20px auto;
-}
-
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	width: 60%;
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
-</style>
 <!-- 设置rem-->
 <script>
 	remFn(10);
@@ -57,39 +25,45 @@
 </head>
 
 <body>
-
-	<!-- 顶部导航 -->
-	<div class="navbar" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#" onclick="homepage()"> <img
-					src="/fruitSale/index/images/logo.jpg" alt="logo" />
-				</a>
-				<a class="index" href="#" onclick="homepage()">主页</a>
-			</div>
-			
-			<div class="navbar_ul">
-				<ul class="nav navbar-nav">
-					<li id="home_index" class="active"><a href="#"  class="Analysis" onclick="homepage()">首页</a> <p></p></li>
-					<li id="intro_index" class="dropdown"><a href="#" class="dropdown-toggle Analysis"
+<div class="navbar" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="/fruitSale/index/images/logo.jpg" alt="logo"/>
+            </a>
+            <a class="index" href="#" onclick="homepage()">主页</a>
+        </div>
+        <div class="navbar_ul">
+            <ul class="nav navbar-nav">
+					<li id="home_index" class="active"><a href="#" onclick="homepage()">首页</a> <p></p></li>
+					<li id="intro_index" class="dropdown"><a href="#" class="dropdown-toggle "
 						data-toggle="dropdown">产品简介<strong class="caret"></strong></a> <p></p>
 						<ul class="dropdown-menu">
 							<li id="intro_mjy_index"><a href="#" onclick="intro('mjy')">马家柚</a> </li>
 							<li id="intro_mht_index"><a href="#" onclick="intro('mht')">猕猴桃</a> </li>
 							<li id="intro_qc_index"><a href="#" onclick="intro('qc')">脐橙</a> </li>
 						</ul></li>
-					<li id="buy_index" ><a href="#" onclick="toBuy()" class="Analysis">产品购买</a> <p></p></li>
-					<li id="about_index" ><a href="#" onclick="aboutUs()" class="Analysis">关于我们</a> <p></p></li>
-					<li id="contact_index" ><a href="#" onclick="contactUs()" class="Analysis">联系我们</a> <p></p></li>
+					<li id="buy_index" ><a href="#" onclick="toBuy()">产品购买</a> <p></p></li>
+					<li id="about_index" ><a href="#" onclick="aboutUs()" >关于我们</a> <p></p></li>
+					<li id="contact_index" ><a href="#" onclick="contactUs()" >联系我们</a> <p></p></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<!-- 客服支持 -->
+	<div style="position :fixed;top:25px;right:100px; z-index:99999 " class = "mo_hide">
+		<a target="_blank" href='http://wpa.qq.com/msgrd?v=3&amp;uin=727845268&amp;site=qq&amp;menu=yes'>
+			<img style ="width:20px;height:20px;" border="0" src="/fruitSale/index/images/qq.jpg" alt="qq客服" title="在线客服"/>
+			<span style="font-size:14px">在线客服</span> 
+		</a>
+	</div>
+	
 
 	<!-- 下边的内容 -->
 	<div id="content_div"></div>
@@ -112,11 +86,11 @@
 
 				<div class="p_box">
 					<p>
-						<a href="#" onclick="contactUs()" class="Analysis" >商务合作</a>
+						<a href="#" onclick="contactUs()"  >商务合作</a>
 					</p>
 
 					<p>
-						<a href="#" onclick="contactUs()" class="Analysis" >企业采购</a>
+						<a href="#" onclick="contactUs()"  >企业采购</a>
 					</p>
 				</div>
 
@@ -132,7 +106,7 @@
 				</div>
 				<div class="tianmao">
 					<a href="#" target="_blank"
-						class="Analysis"> <em></em>
+						> <em></em>
 
 						<p>天猫</p>
 					</a>
@@ -140,7 +114,7 @@
 				</div>
 
 				<div class="weibo">
-					<a href="#" target="_blank" class="Analysis" >
+					<a href="#" target="_blank"  >
 						<em></em>
 
 						<p>微博</p>
@@ -150,12 +124,12 @@
 			<div class="follow mo_show">
 				<h3>关注我们</h3>
 				<section class="p_box">
-					<img class="Analysis weixin" 
+					<img class=" weixin" 
 						src="#" /> <a
-						href="#" target="_blank" class="Analysis"
+						href="#" target="_blank" 
 						> <img
 						src="#" /></a> <a href="#" target="_blank"
-						class="Analysis" > <img
+						 > <img
 						src="#" />
 					</a>
 				</section>
@@ -177,16 +151,8 @@
 		</div>
 	</div>
 </body>
-<script src="/scripts/custom/js/jquery-1.9.1.min.js"></script>
-<script src="/scripts/custom/js/jquery.md5.js"></script>
-<script src="/scripts/custom/js/Global.js"></script>
-<script src="/scripts/custom/js/swiper.min.js"></script>
-<script src="/scripts/custom/js/index.js"></script>
-<script src="/scripts/custom/js/nav.js"></script>
-<script src="/scripts/custom/js/bootstrap.min.js"></script>
-<script src="/scripts/custom/js/owl.carousel.min.js"></script>
-<script src="/scripts/custom/js/Analysis.js"></script>
-<script src="/scripts/custom/js/swiper.min.js"></script>
-<script type="text/javascript"
-	src="/fruitSale/index/js/index.js"></script>
+<script src="/global/jquery/js/jquery-3.1.1.min.js"></script>
+<script src="/global/swiper-3.4.2/js/swiper-3.4.2.jquery.min.js"></script>
+<script src="/global/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/fruitSale/index/js/index.js"></script>
 </html>

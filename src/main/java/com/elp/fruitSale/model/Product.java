@@ -4,9 +4,9 @@ package com.elp.fruitSale.model;
 public class Product{
 
 	private String type;
-	private String num;
-	private String price;
-	private String totalPrice;
+	private int num;
+	private float price;
+	private float totalPrice;
 	private String name;
 	public String getType() {
 		return type;
@@ -14,22 +14,24 @@ public class Product{
 	public void setType(String type) {
 		this.type = type;
 	}
-	public String getNum() {
+	
+	public int getNum() {
 		return num;
 	}
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
-	public String getPrice() {
+
+	public float getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
-	public String getTotalPrice() {
+	public float getTotalPrice() {
 		return totalPrice;
 	}
-	public void setTotalPrice(String totalPrice) {
+	public void setTotalPrice(float totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 	public String getName() {

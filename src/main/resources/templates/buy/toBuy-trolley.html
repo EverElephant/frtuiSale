@@ -29,7 +29,11 @@
 					<td width="10%" th:text="${product.type}" >type</td>
 					<td width="30%" th:text="${product.name}">name</td>
 					<td width="10%" th:text="${product.price}">price</td>
-					<td width="15%" th:value="${product.type}" ><input type="text" size="8" th:value="${product.num}" onchange="changeTrolley(this)"></input></td>
+					<td width="15%" th:value="${product.type}" >
+						<span onclick="sub(this)" style="cursor:pointer">-</span>
+						<input type="text" size="4" th:value="${product.num}" onchange="changeTrolley(this)" style="text-align: right;"></input>
+						<span onclick="add(this)" style="cursor:pointer">+</span>
+					</td>
 					<td width="15%" th:text="${product.totalPrice}">totalPrice</td>
 					<td width="10%" class="del"><a style="cursor:pointer">删除</a></td>
 				</tr>

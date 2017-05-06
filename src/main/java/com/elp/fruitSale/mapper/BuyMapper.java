@@ -12,5 +12,5 @@ public interface BuyMapper {
 	@Select("select * from test where kpi_code = #{kpiCode}")
 	String findValue(@Param("kpiCode") String kpiCode);
 	@Select("select * from product_price")
-	List<HashMap<String, String>> queryAllPrice();
+	List<HashMap<String, Object>> queryAllPrice();
 }

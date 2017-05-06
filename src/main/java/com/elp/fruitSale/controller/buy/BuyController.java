@@ -39,19 +39,26 @@ public class BuyController {
 
 	@RequestMapping(value="trolley",method = RequestMethod.POST)
 	public String trolley(HttpServletRequest request,HttpServletResponse response,Model model){
+		String cookiesStr = request.getHeader("Cookie");
+		if(null==cookiesStr||"".equals(cookiesStr)){
+			
+			return "buy/toBuy-trolley";
+		}
+		String[] cookies = cookiesStr.split(";");
 		float total=0;
 		//返回结果
 		ArrayList<Product> productList=new ArrayList<>();
 		//查询价格
-		List<HashMap<String,String>> prices = dao.queryAllPrice();
+		List<HashMap<String,Object>> prices = dao.queryAllPrice();
 		//购物车缓存String
 		String trolleysString="";
-		Cookie[] cookies = request.getCookies();
+
 		//如果有缓存
 		if(null!=cookies){
-			for(Cookie c:cookies){
-				if(c.getName().equals("shopping_trolley")){
-					trolleysString=c.getValue();
+			for(String c:cookies){
+				String[] cookieArray = c.split("=");
+				if(("shopping_trolley").equals(cookieArray[0].trim())){
+					trolleysString=cookieArray[1];
 				}
 			}
 		}
@@ -62,19 +69,19 @@ public class BuyController {
 			for(JSONObject p:list){
 				Product pro = new Product();			
 				pro.setType((String) p.get("type"));
-				pro.setNum((String) p.get("num"));
+				pro.setNum((int) p.get("num"));
 				
 				String type =(String) p.get("type");
-				for(HashMap<String,String> m :prices){
+				for(HashMap<String,Object> m :prices){
 					if(type.equals(m.get("type"))){
-						pro.setName(m.get("name"));
-						pro.setPrice(m.get("price"));
+						pro.setName((String)m.get("name"));
+						pro.setPrice((float)m.get("price"));
 						
 					}
 						
 				}
-				float smallTotal =Float.parseFloat(pro.getNum())*Float.parseFloat(pro.getPrice());
-				pro.setTotalPrice(smallTotal+"");
+				float smallTotal =pro.getNum()*pro.getPrice();
+				pro.setTotalPrice(smallTotal);
 				total = total+smallTotal;
 				productList.add(pro);
 			}
