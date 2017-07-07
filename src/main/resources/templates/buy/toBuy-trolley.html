@@ -32,9 +32,9 @@
 				<tbody>
 					<tr th:each="product : ${productList}">
 						<td width="10%" name="type" class="type" th:text="${product.type}">type</td>
-						<td width="30%" class="name" th:text="${product.name}">name</td>
+						<td width="25%" class="name" th:text="${product.name}">name</td>
 						<td width="10%" class="price" th:text="${product.price}">price</td>
-						<td width="15%" class="num"><span
+						<td width="20%" class="num"><span
 							onclick="sub(this)" style="cursor: pointer">-</span> <input
 							type="text" size="4" th:value="${product.num}"
 							onchange="changeTrolley(this)" style="text-align: right;"></input>
