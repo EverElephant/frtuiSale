@@ -38,6 +38,13 @@ jQuery(function() {
         $("body").css("overflow","scroll");
 
     });
+    $("#content_div").mLoading({
+        text:"",//加载文字，默认值：加载中...
+        icon:"",//加载图标，默认值：一个小型的base64的gif图片
+        html:false,//设置加载内容是否是html格式，默认值是false
+        content:"加载中",//忽略icon和text的值，直接在加载框中显示此值
+        mask:true//是否显示遮罩效果，默认显示
+    });
 	homepage();
 });
 
@@ -45,11 +52,13 @@ function homepage() {
 	jQuery(".navbar-nav > li").removeClass("active");
 	jQuery("#home_index").addClass("active");
 	
+	jQuery("#content_div").mLoading("show");
 	jQuery.ajax({
 		type : "POST",
 		url : "homepage",
 		success : function(data) {
 			jQuery("#content_div").html(data);
+			jQuery("#content_div").mLoading("hide");
 		}
 	});
 

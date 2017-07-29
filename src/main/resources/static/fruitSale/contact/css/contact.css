@@ -8,6 +8,12 @@ body{
 /*关于乐纯*/
 .contact_us{
     margin-top: 100px;
+    overflow: hidden;
+    max-width: 1140px;
+   	margin-bottom:0px;
+   	margin-left:auto;
+   	margin-right:auto;
+    padding: 0px 0px;
 }
 .contact_us h3 {
     font-size: 26px;
@@ -16,6 +22,7 @@ body{
 }
 
 .contact_us .title {
+	
     text-align: center;
 }
 
@@ -59,6 +66,9 @@ body{
     word-spacing:2px;
     letter-spacing: 1px;
     font-weight: 400;
+}
+.contact_us .row{
+	padding: 0px 30px
 }
 .contact_us .row img{
     width: 100%;
