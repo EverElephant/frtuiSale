@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.elp.fruitSale.mapper.BuyMapper;
+import com.elp.fruitSale.mapper.FruitMapper;
 import com.elp.fruitSale.model.Product;
 
 @Controller
@@ -30,11 +30,10 @@ public class BuyController {
 	
 	
 	@Autowired
-	BuyMapper dao;
+	FruitMapper dao;
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public String homepage(){
-		dao.findValue("kpi_001");
 		return "buy/toBuy-main";
 	}
 
