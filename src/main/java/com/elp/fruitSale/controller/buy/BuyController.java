@@ -33,7 +33,9 @@ public class BuyController {
 	FruitMapper dao;
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String homepage(){
+	public String homepage(Model model){
+		List productList = dao.queryAllProduct();
+		model.addAttribute("productList", productList);
 		return "buy/toBuy-main";
 	}
 
@@ -50,7 +52,7 @@ public class BuyController {
 		//返回结果
 		ArrayList<Product> productList=new ArrayList<>();
 		//查询价格
-		List<HashMap<String,Object>> prices = dao.queryAllPrice();
+		List<HashMap<String,Object>> prices = dao.queryAllProduct();
 		//购物车缓存String
 		String trolleysString="";
 		//如果有缓存

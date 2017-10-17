@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Select;
 public interface FruitMapper {	
 	
 	@Select("select * from product_price")
-	List<HashMap<String, Object>> queryAllPrice();
+	List<HashMap<String, Object>> queryAllProduct();
 	
 	@Insert("insert into contact (name,tel,email,content) values (#{name},#{tel},#{email},#{content})")
 	void insertContact(@Param("name") String name,@Param("tel") String tel,@Param("email") String email,@Param("content") String content);

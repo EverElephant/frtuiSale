@@ -39,111 +39,27 @@
 <div id = "listDiv">
 <div class="modity container mo_hied">
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
+    	<div th:each="product:${productList}" class="col-lg-4 col-md-4 col-sm-4">
+    		<section class="img_box">
+                <img th:src="@{/fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
             </section>
-            <h3>马家柚3千克</h3>
-            <div><button class="btn" onclick="add_to('1')">加入购物车</button></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-            </section>
-            <h3>马家柚3千克</h3>
-			<div><button class="btn" onclick="add_to('2')">加入购物车</button></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-            </section>
-            <h3>马家柚3千克</h3>
-			<div><button class="btn" onclick="add_to('3')">加入购物车</button></div>
-        </div>
-
-    </div>
-    <div class="row">
-       <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-            </section>
-            <h3>马家柚3千克</h3>
-			<div><button class="btn" onclick="add_to('4')">加入购物车</button></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-            </section>
-            <h3>马家柚3千克</h3>
-			<div><button class="btn" onclick="add_to('5')">加入购物车</button></div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <section class="img_box">
-                <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-            </section>
-            <h3>马家柚3千克</h3>
-			<div><button class="btn" onclick="add_to('6')">加入购物车</button></div>
-        </div>
+		    <h3 th:text="${product.name}+'   '+${product.price}+'元'">马家柚3千克</h3>
+            <div><button class="btn" th:onclick="'add_to(&quot;'+${product.type}+'&quot;)'">加入购物车</button></div>
+    	</div>
     </div>
 </div>
 <div class="modity container ">
     <div class="swiper-container story_swiper mo_show">
         <div class="swiper-wrapper slide_box">
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('1')">加入购物车</button></div>
+            <div th:each="product:${productList}" class="swiper-slide">
+                <div  class="col-lg-3 col-md-3 col-sm-6">
+                   	<section class="img_box">
+	                	<img th:src="@{/fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
+		            </section>
+		            <h3 th:text="${product.name}+'   '+${product.price}+'元'">马家柚3千克</h3>
+		            <div><button class="btn" th:onclick="'add_to(&quot;'+${product.type}+'&quot;)'">加入购物车</button></div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('2')">加入购物车</button></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('3')">加入购物车</button></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('4')">加入购物车</button></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('5')">加入购物车</button></div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <section class="img_box">
-                        <img src="/fruitSale/buy/images/list_1.jpg" alt="马家柚3千克"/>
-                    </section>
-                    <h3>马家柚3千克</h3>
-					<div><button class="btn" onclick="add_to('6')">加入购物车</button></div>
-                </div>
-            </div>
-          	
         </div>
         <div class="swiper-pagination"></div>
     </div>

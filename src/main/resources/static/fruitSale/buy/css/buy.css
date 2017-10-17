@@ -158,6 +158,9 @@ font {
 .modity .row {
     margin-bottom: 35px;
 }
+.modity .row div {
+    margin: 5px 0;
+}
 
 .modity {
     margin: 50px auto;
