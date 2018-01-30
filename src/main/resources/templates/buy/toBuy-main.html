@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="UTF-8"></meta>
-<link href="/fruitSale/buy/css/buy.css" rel="stylesheet"/>
+<link href="fruitSale/buy/css/buy.css" rel="stylesheet"/>
 </head>
 <body>
 
 <!--banner -->
 <div class="banner mo_hied" style="margin-top: 70px;">
-    <img src="/fruitSale/buy/images/buy_banner.jpg" alt="banner"/>
+    <img src="fruitSale/buy/images/buy_banner.jpg" alt="banner"/>
 </div>
 <div class="banner mo_show" style="margin-top: 50px">
-     <img src="/fruitSale/buy/images/buy_banner.jpg" alt="banner"/>
+     <img src="fruitSale/buy/images/buy_banner.jpg" alt="banner"/>
 </div>
 <div class="buy_bg">
     <div class="buy_box">
@@ -25,10 +25,10 @@
             <button class="btn" onclick="checkTrolley()">查看购物车</button>
         </div>
         <div class="list_1 mo_hied">
-            <img src="/fruitSale/buy/images/buy.png" alt="产品购买"/>
+            <img src="fruitSale/buy/images/buy.png" alt="产品购买"/>
         </div>
         <div class="list_3 mo_hied" onclick="checkTrolley()">
-        	<img src="/fruitSale/buy/images/trolley.jpg" alt="购物车" style="cursor:pointer"/>
+        	<img src="fruitSale/buy/images/trolley.jpg" alt="购物车" style="cursor:pointer"/>
         </div>
     </div>
 
@@ -41,7 +41,7 @@
     <div class="row">
     	<div th:each="product:${productList}" class="col-lg-4 col-md-4 col-sm-4">
     		<section class="img_box">
-                <img th:src="@{/fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
+                <img th:src="@{fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
             </section>
 		    <h3 th:text="${product.name}+'   '+${product.price}+'元'">马家柚3千克</h3>
             <div><button class="btn" th:onclick="'add_to(&quot;'+${product.type}+'&quot;)'">加入购物车</button></div>
@@ -54,7 +54,7 @@
             <div th:each="product:${productList}" class="swiper-slide">
                 <div  class="col-lg-3 col-md-3 col-sm-6">
                    	<section class="img_box">
-	                	<img th:src="@{/fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
+	                	<img th:src="@{fruitSale/buy/images/list_{type}.jpg(type=${product.type})}" alt="马家柚3千克"/>
 		            </section>
 		            <h3 th:text="${product.name}+'   '+${product.price}+'元'">马家柚3千克</h3>
 		            <div><button class="btn" th:onclick="'add_to(&quot;'+${product.type}+'&quot;)'">加入购物车</button></div>
@@ -67,5 +67,5 @@
 </div>
 
 </body>
-<script src="/fruitSale/buy/js/buy.js"></script>
+<script src="fruitSale/buy/js/buy.js"></script>
 </html>
